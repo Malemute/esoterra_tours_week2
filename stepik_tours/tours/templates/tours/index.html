@@ -1,0 +1,29 @@
+{% extends 'tours/base.html' %}
+
+{% block main %}
+    <!-- HERO -->
+    <section class="jumbotron text-center mt-4"
+             style="background: url('https://www.snow-forecast.com/webcams/Courmayeur.day0.jpg'); background-position: center center;
+                    color: #FFFFFF">
+      <h1 class="display-4">Всякие туры</h1>
+      <p class="lead">Для тех, кого отвлекают дома</p>
+      <p class="mt-5 w-50 mx-auto">{{ description }}</p>
+    </section>
+    <!-- CARDS -->
+    <div class="row mt-5">
+            {% for key,value in tours.items %}
+      <div class="col-4">
+        <div class="card mb-4">
+          <div class="embed-responsive embed-responsive-16by9">
+             <img class="card-img-top embed-responsive-item" src="{{ value.picture }}" alt="" />
+          </div>          
+          <div class="card-body">
+            <h2 class="h5 card-title">{{ value.title }}</h2>
+            <p class="card-text">{{ value.description }}</p>
+            <a href="{% url 'tour' key %}" class="btn btn-sm btn-primary">Подробнее</a>
+          </div>
+        </div>
+      </div>
+             {% endfor %}
+    </div>
+{% endblock %}
