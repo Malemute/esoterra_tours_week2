@@ -1,4 +1,4 @@
-# esoterra_tours
+# esoterra_tours_week2
 This script creates a site on tours by means of Django.
 
 # Quickstart
@@ -7,8 +7,6 @@ The script requires Python 3.7 or later version installed. Then use pip (or pip3
 ```
 pip install -r requirements.txt
 ```
-The script is totally compatible with PEP8, so it does not need the ".flake8" file.
-
 Example of script launch on Linux, Python 3.7:
 
 ```bash
